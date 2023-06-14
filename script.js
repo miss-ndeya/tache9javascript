@@ -23,9 +23,9 @@ function maFonction() {
     // afficher les resultats dans le DOM
     const resultats = document.getElementById("resultats");
 
-    // Afficher les elements positifs de tab1
+    // Afficher le  nouveau tableau
     const tab3Paragraph = document.createElement("p");
     tab3Paragraph.textContent =" tab3 = [ " + tab3.join(", ") + " ]";
     resultats.appendChild(tab3Paragraph);
-
+    
   }
