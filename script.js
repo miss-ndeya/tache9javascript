@@ -12,21 +12,20 @@ function maFonction() {
     const tab2 = tab2Input.value.split(",");
 
     // Filtrer les elements positifs de tab1
-    const tab3 = tab1.filter((num) => num > 0);    
+    const positiftab1 = tab1.filter((num) => num > 0);    
 
     // remplacer les elements de tab2  par des zeros 
     tab2.fill(0);
+
+    // fusionnage des deux tableaux
+    const tab3 = positiftab1.concat(tab2);
 
     // afficher les resultats dans le DOM
     const resultats = document.getElementById("resultats");
 
     // Afficher les elements positifs de tab1
     const tab3Paragraph = document.createElement("p");
-    tab3Paragraph.textContent = "les element positives de votre tab1 sont : " + " tab3= [ " + tab3.join(", ") + " ]";
+    tab3Paragraph.textContent =" tab3 = [ " + tab3.join(", ") + " ]";
     resultats.appendChild(tab3Paragraph);
 
-    // Afficher les nouveaux elements de tab2 
-    const tab2Paragraph = document.createElement("p");
-    tab2Paragraph.textContent = "les element de votre tab2 sont remplacer par des zero :" + " tab2= [ " +  tab2.join(", ") + " ]";
-    resultats.appendChild(tab2Paragraph);
   }
